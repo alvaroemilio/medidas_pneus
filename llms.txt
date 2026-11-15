@@ -1,17 +1,26 @@
 # PneusMedidas
+
 > Comparador visual de pneus automotivos. Ferramenta gratuita e 100% client-side.
 
-PneusMedidas é uma ferramenta web gratuita para comparar visualmente medidas de pneus automotivos. Permite sobrepor perfis de até 6 pneus com cores distintas.
+PneusMedidas é uma ferramenta web gratuita para comparar visualmente medidas de pneus automotivos. O site permite sobrepor perfis de até 6 pneus com cores distintas, exibindo diferenças de diâmetro, largura, parede lateral, circunferência e impacto no velocímetro.
 
 ## Páginas
-- [Comparador](https://pneusmedidas.com.br/): Ferramenta principal de comparação visual.
-- [Guia](https://pneusmedidas.com.br/guia.html): Manual técnico sobre notação e cálculos de pneus.
-- [Sobre](https://pneusmedidas.com.br/sobre.html): Sobre o projeto.
-- [Privacidade](https://pneusmedidas.com.br/privacidade.html): Política de privacidade.
-- [Termos](https://pneusmedidas.com.br/termos.html): Termos de uso.
+
+- [Comparador](https://alvaroemilio.github.io/medidas_pneus/): Ferramenta principal de comparação visual de pneus.
+- [Guia de Medidas](https://alvaroemilio.github.io/medidas_pneus/guia.html): Manual técnico sobre notação e cálculos de pneus.
+- [Sobre](https://alvaroemilio.github.io/medidas_pneus/sobre.html): Sobre o projeto e desenvolvedor.
+- [Privacidade](https://alvaroemilio.github.io/medidas_pneus/privacidade.html): Política de privacidade.
+- [Termos de Uso](https://alvaroemilio.github.io/medidas_pneus/termos.html): Termos e condições de uso.
 
 ## Tecnologias
-HTML5, CSS3, JavaScript vanilla, Bootstrap 5.3, Canvas API 2D. 100% client-side.
+
+HTML5, CSS3, JavaScript vanilla, Bootstrap 5.3, Canvas API 2D. 100% client-side, sem backend.
+
+## Demonstração e Repositório
+
+- Demonstração online: https://alvaroemilio.github.io/medidas_pneus/
+- Repositório no GitHub: https://github.com/alvaroemilio/medidas_pneus
 
 ## Contato
+
 Desenvolvido por Álvaro Emílio.

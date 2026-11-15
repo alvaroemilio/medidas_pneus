@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://pneusmedidas.com.br/sitemap.xml
+Sitemap: https://alvaroemilio.github.io/medidas_pneus/sitemap.xml
