@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sobre o PneusMedidas. Conheça o projeto de comparador visual de pneus, sua inspiração e compromisso com a privacidade."
+    />
+    <meta name="keywords" content="PneusMedidas, sobre, comparador pneus, ferramenta gratuita" />
+    <meta name="theme-color" content="#08080f" />
+
+    <title>Sobre | PneusMedidas</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre o PneusMedidas" />
+    <meta
+      property="og:description"
+      content="Conheça o comparador visual de pneus: ferramenta gratuita, open-source e 100% client-side."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/og-image.png" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/1lP6tFb0d2nlHQDEwfi5vhvbN4CSPKZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- =====================================================================
+       NAVBAR
+       ===================================================================== -->
+    <nav class="site-nav">
+      <div class="site-container">
+        <a class="nav-brand" href="index.html">
+          <img
+            src="img/favicon.svg"
+            alt="PneusMedidas"
+            width="30"
+            height="30"
+          />
+          <span>PneusMedidas</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html">
+              <i class="bi bi-bar-chart-line"></i> Comparador
+            </a>
+          </li>
+          <li>
+            <a href="guia.html"> <i class="bi bi-book"></i> Guia </a>
+          </li>
+          <li>
+            <a href="sobre.html" class="active" aria-current="page">
+              <i class="bi bi-info-circle"></i> Sobre
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =====================================================================
+       CONTEÚDO PRINCIPAL
+       ===================================================================== -->
+    <main class="main-content">
+      <div class="container py-4">
+        <!-- =================================================================
+           1. HERO SECTION
+           ================================================================= -->
+        <section class="text-center py-4 mb-4">
+          <div
+            class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-subtle mb-3"
+          >
+            <i class="bi bi-info-circle text-accent"></i>
+            <span class="small text-muted">Conheça o projeto</span>
+          </div>
+          <h1 class="display-5 fw-bold text-accent mb-3">
+            Sobre o PneusMedidas
+          </h1>
+          <p class="lead text-muted mx-auto" style="max-width: 720px">
+            Uma ferramenta visual, moderna e interativa criada para simplificar
+            a comparação de medidas de pneus automotivos através de
+            representações gráficas sobrepostas e cálculos precisos.
+          </p>
+        </section>
+
+        <!-- =================================================================
+           2. O PROJETO
+           ================================================================= -->
+        <section class="mb-5">
+          <div class="card p-4">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-lightbulb text-accent fs-3 me-2"></i>
+              <h2 class="h4 mb-0 text-white">O Projeto</h2>
+            </div>
+            <p class="text-secondary mb-4">
+              O <strong>PneusMedidas</strong> nasceu com o objetivo de oferecer
+              aos motoristas, entusiastas e profissionais do setor automotivo
+              uma forma simples, clara e visual de entender as alterações
+              dimensionais ao trocar as medidas originais de pneus e rodas.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="p-3 rounded bg-black bg-opacity-25 border border-subtle h-100"
+                >
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-code-slash text-accent fs-5 me-2"></i>
+                    <h6 class="mb-0 text-white">Gratuito e Open Source</h6>
+                  </div>
+                  <small class="text-muted">
+                    Código aberto, livre para uso e contribuições comunitárias
+                    sem nenhum custo.
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="p-3 rounded bg-black bg-opacity-25 border border-subtle h-100"
+                >
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-layers text-accent fs-5 me-2"></i>
+                    <h6 class="mb-0 text-white">Comparação Visual</h6>
+                  </div>
+                  <small class="text-muted">
+                    Permite sobrepor perfis de pneus em escala real com cores
+                    distintas, facilitando a identificação de diferenças de
+                    diâmetro e largura.
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="p-3 rounded bg-black bg-opacity-25 border border-subtle h-100"
+                >
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-cpu text-accent fs-5 me-2"></i>
+                    <h6 class="mb-0 text-white">100% Navegador</h6>
+                  </div>
+                  <small class="text-muted">
+                    Todos os cálculos e renderizações acontecem diretamente no
+                    seu navegador. Nenhuma informação é transmitida para
+                    servidores externos.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+           4. COMO FUNCIONA
+           ================================================================= -->
+        <section class="mb-5">
+          <div class="card p-4">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-gear-wide-connected text-accent fs-3 me-2"></i>
+              <div>
+                <h2 class="h4 mb-0 text-white">Como Funciona</h2>
+                <small class="text-muted"
+                  >Processo técnico em quatro etapas simples</small
+                >
+              </div>
+            </div>
+
+            <div class="row g-4 mt-1">
+              <div class="col-md-6 col-lg-3">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <span
+                      class="badge rounded-circle bg-dark border border-info text-accent p-2 fs-6"
+                      >01</span
+                    >
+                  </div>
+                  <div>
+                    <h6 class="text-white mb-1">Seleção de Medidas</h6>
+                    <p class="text-muted small mb-0">
+                      O usuário seleciona os parâmetros fundamentais do pneu:
+                      largura da banda de rodagem (mm), perfil/proporção (%) e
+                      diâmetro do aro (polegadas).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <span
+                      class="badge rounded-circle bg-dark border border-info text-accent p-2 fs-6"
+                      >02</span
+                    >
+                  </div>
+                  <div>
+                    <h6 class="text-white mb-1">Cálculo das Dimensões</h6>
+                    <p class="text-muted small mb-0">
+                      O sistema calcula altura do flanco, diâmetro total, raio,
+                      circunferência e rotações por quilômetro utilizando
+                      fórmulas geométricas padronizadas da indústria.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <span
+                      class="badge rounded-circle bg-dark border border-info text-accent p-2 fs-6"
+                      >03</span
+                    >
+                  </div>
+                  <div>
+                    <h6 class="text-white mb-1">Renderização em Canvas</h6>
+                    <p class="text-muted small mb-0">
+                      A Canvas API 2D desenha os perfis dos pneus em escala
+                      precisa, sobrepondo as formas geométricas com contornos
+                      coloridos para visualização imediata das discrepâncias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <span
+                      class="badge rounded-circle bg-dark border border-info text-accent p-2 fs-6"
+                      >04</span
+                    >
+                  </div>
+                  <div>
+                    <h6 class="text-white mb-1">Tabela Comparativa</h6>
+                    <p class="text-muted small mb-0">
+                      Exibe variações nominais e percentuais (diferença de
+                      diâmetro, velocímetro e altura em relação ao solo)
+                      comparando cada modelo ao pneu de referência.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+           5. PRIVACIDADE
+           ================================================================= -->
+        <section class="mb-5">
+          <div class="card p-4 border-start border-3 border-accent">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-shield-check text-accent fs-3 me-2"></i>
+              <div>
+                <h2 class="h4 mb-0 text-white">Privacidade e Transparência</h2>
+                <small class="text-muted"
+                  >Seus dados pertencem unicamente a você</small
+                >
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-x-circle text-danger fs-5 me-2 mt-1"></i>
+                  <div>
+                    <strong class="text-white d-block"
+                      >Zero Rastreamento</strong
+                    >
+                    <span class="text-muted small"
+                      >Não utilizamos cookies de rastreamento.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-database text-accent fs-5 me-2 mt-1"></i>
+                  <div>
+                    <strong class="text-white d-block"
+                      >Controle Total do Armazenamento</strong
+                    >
+                    <span class="text-muted small"
+                      >A lista de pneus fica gravada no seu navegador.</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-pc-display text-accent fs-5 me-2 mt-1"></i>
+                  <div>
+                    <strong class="text-white d-block">Execução Local</strong>
+                    <span class="text-muted small"
+                      >Todas as rotinas funcionam isoladamente no seu
+                      navegador.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+           6. DESENVOLVEDOR
+           ================================================================= -->
+        <section class="mb-5">
+          <div class="card p-4 text-center">
+            <div
+              class="mx-auto mb-3 p-3 rounded-circle bg-dark border border-subtle d-inline-flex"
+            >
+              <i class="bi bi-person-circle text-accent fs-1"></i>
+            </div>
+            <h2 class="h4 text-white mb-1">Desenvolvido por Álvaro Emílio</h2>
+            <p class="text-muted mb-3">
+              Projeto independente criado em <strong>2026</strong> focado em
+              utilidade prática, usabilidade e design limpo.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-secondary btn-sm px-3"
+              >
+                <i class="bi bi-github me-1"></i> Repositório no GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+           7. CTA (CALL TO ACTION)
+           ================================================================= -->
+        <section
+          class="text-center py-4 p-4 rounded bg-dark border border-subtle"
+        >
+          <i class="bi bi-speedometer2 text-accent fs-1 d-block mb-3"></i>
+          <h3 class="fw-bold text-white mb-2">
+            Pronto para comparar seus pneus?
+          </h3>
+          <p class="text-muted mx-auto mb-4" style="max-width: 600px">
+            Selecione as medidas originais do seu veículo e veja em tempo real o
+            impacto visual e dimensional de novas configurações.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="index.html" class="btn btn-primary px-4 py-2">
+              <i class="bi bi-bar-chart-line me-2"></i>Acessar o Comparador
+            </a>
+            <a href="guia.html" class="btn btn-outline-secondary px-4 py-2">
+              <i class="bi bi-book me-2"></i>Guia de Medidas
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-container">
+        <small>&copy; 2026 <strong>PneusMedidas</strong> | Comparador Visual de Pneus</small>
+        <div class="footer-links">
+          <a href="guia.html"><small>Guia</small></a>
+          <a href="sobre.html"><small>Sobre</small></a>
+          <a href="privacidade.html"><small>Privacidade</small></a>
+          <a href="termos.html"><small>Termos</small></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var navToggle = document.getElementById("navToggle");
+      var navLinks = document.getElementById("navLinks");
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("open");
+        });
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1602 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guia completo de medidas de pneus. Aprenda a ler a notação (185/60 R15), calcular diâmetro total, parede lateral, circunferência e confira dicas vitais de segurança automotiva."
+    />
+    <meta name="keywords" content="guia medidas pneus, como ler pneu, notação pneu, 185/60 R15, perfil pneu, largura pneu, diâmetro total" />
+    <meta name="theme-color" content="#08080f" />
+
+    <title>Guia de Medidas de Pneus | PneusMedidas</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Guia de Medidas de Pneus | PneusMedidas"
+    />
+    <meta
+      property="og:description"
+      content="Aprenda a decifrar as medidas do pneu, calcular dimensões reais e conferir dicas de segurança para substituição."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/og-image.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/1lP6tFb0d2nlHQDEwfi5vhvbN4CSPKZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- =====================================================================
+       NAVBAR
+       ===================================================================== -->
+    <nav class="site-nav">
+      <div class="site-container">
+        <a class="nav-brand" href="index.html">
+          <img
+            src="img/favicon.svg"
+            alt="PneusMedidas"
+            width="30"
+            height="30"
+          />
+          <span>PneusMedidas</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html">
+              <i class="bi bi-bar-chart-line"></i> Comparador
+            </a>
+          </li>
+          <li>
+            <a href="guia.html" class="active" aria-current="page">
+              <i class="bi bi-book"></i> Guia
+            </a>
+          </li>
+          <li>
+            <a href="sobre.html"> <i class="bi bi-info-circle"></i> Sobre </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =====================================================================
+       CONTEÚDO PRINCIPAL
+       ===================================================================== -->
+    <main class="main-content">
+      <div class="site-container">
+        <!-- =================================================================
+           1. HERO SECTION
+           ================================================================= -->
+        <div class="page-hero">
+          <div class="guide-badge-pill">
+            <i class="bi bi-book-half text-accent"></i>
+            <span>Manual Técnico Automotivo</span>
+          </div>
+          <h1>Guia de <span class="text-gradient">Medidas de Pneus</span></h1>
+          <p>
+            Decifre as marcações do flanco, calcule dimensões físicas reais e escolha medidas alternativas com total segurança.
+          </p>
+
+          <!-- Pílulas de Navegação Rápida -->
+          <div class="quick-nav-pills">
+            <a href="#como-ler" class="quick-nav-pill">
+              <i class="bi bi-eye text-accent"></i> Como Ler a Medida
+            </a>
+            <a href="#dimensoes" class="quick-nav-pill">
+              <i class="bi bi-calculator text-success"></i> Dimensões Calculadas
+            </a>
+            <a href="#tabela-medidas" class="quick-nav-pill">
+              <i class="bi bi-table text-warning"></i> Medidas Comuns
+            </a>
+            <a href="#dicas-seguranca" class="quick-nav-pill">
+              <i class="bi bi-shield-check text-danger"></i> Dicas de Segurança
+            </a>
+          </div>
+        </div>
+
+        <!-- =================================================================
+           2. SEÇÃO: COMO LER A MEDIDA
+           ================================================================= -->
+        <section id="como-ler" class="mb-5" style="scroll-margin-top: 80px;">
+          <div class="glass-card mb-4">
+            <div class="glass-card-header d-flex align-items-center">
+              <i class="bi bi-card-text text-accent fs-4 me-3"></i>
+              <div>
+                <h5 class="mb-0">Como Ler a Medida do Pneu</h5>
+                <small class="text-tertiary">Entenda cada dígito da notação universal com base no exemplo <strong>185/60 R15 88H</strong></small>
+              </div>
+            </div>
+            <div class="glass-card-body">
+              <!-- Banner com a notação destacada -->
+              <div class="notation-banner">
+                <span class="text-muted small text-uppercase fw-semibold d-block">Notação Gravada no Flanco do Pneu</span>
+                <div class="notation-display">
+                  <span class="badge-part badge-width" title="Largura em milímetros">185</span>
+                  <span class="text-muted">/</span>
+                  <span class="badge-part badge-profile" title="Perfil em percentual">60</span>
+                  <span class="badge-part badge-radial" title="Construção Radial">R</span>
+                  <span class="badge-part badge-rim" title="Diâmetro do aro em polegadas">15</span>
+                  <span class="badge-part badge-extra" title="Índice de Carga e Velocidade">88H</span>
+                </div>
+                <small class="text-tertiary d-block">
+                  Toque ou passe o cursor sobre os blocos para relacionar com a explicação abaixo
+                </small>
+              </div>
+
+              <!-- Diagrama Técnico SVG com Wrapper Responsivo -->
+              <div class="glass-card mb-4">
+                <div class="glass-card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <h5 class="mb-0"><i class="bi bi-diagram-3 text-accent me-2"></i>Diagrama Técnico Dimensional</h5>
+                    <small class="text-tertiary">Corte transversal (largura e perfil) e visão lateral (aro e diâmetro total)</small>
+                  </div>
+                  <span class="badge bg-dark border border-subtle text-muted">Exemplo: 185/60 R15</span>
+                </div>
+                <div class="glass-card-body p-2 p-md-3">
+                  <div class="diagram-scroll-hint">
+                    <i class="bi bi-arrows-expand me-1"></i>Arraste para o lado para explorar o corte técnico
+                  </div>
+                  <div class="diagram-responsive-wrapper">
+                    <svg
+                      class="tire-diagram img-fluid w-100"
+                      viewBox="0 0 900 440"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="Diagrama técnico com as medidas de um pneu automotivo"
+                    >
+                <defs>
+                  <!-- Marcadores de Flechas -->
+                  <marker
+                    id="arrow-cyan"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#00e5ff" />
+                  </marker>
+                  <marker
+                    id="arrow-green"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#00ff88" />
+                  </marker>
+                  <marker
+                    id="arrow-yellow"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#ffc107" />
+                  </marker>
+                  <marker
+                    id="arrow-white"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#ffffff" />
+                  </marker>
+
+                  <!-- Gradientes do Pneu -->
+                  <radialGradient id="tireSideGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="60%" stop-color="#1b1c26" />
+                    <stop offset="90%" stop-color="#2a2b3d" />
+                    <stop offset="100%" stop-color="#12131b" />
+                  </radialGradient>
+                  <radialGradient id="rimGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#252636" />
+                    <stop offset="80%" stop-color="#141520" />
+                    <stop offset="100%" stop-color="#2d2e42" />
+                  </radialGradient>
+                  <linearGradient
+                    id="treadGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#1f202e" />
+                    <stop offset="50%" stop-color="#2e3046" />
+                    <stop offset="100%" stop-color="#1f202e" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Painel de Fundo do SVG -->
+                <rect width="900" height="440" fill="#08080d" rx="10" />
+
+                <!-- Divisória suave entre os dois diagramas -->
+                <line
+                  x1="430"
+                  y1="30"
+                  x2="430"
+                  y2="410"
+                  stroke="#1f202e"
+                  stroke-width="1.5"
+                  stroke-dasharray="4,4"
+                />
+
+                <!-- ==============================================================
+                   DIAGRAMA 1 (ESQUERDA): CORTE TRANSVERSAL DO PNEU
+                   ============================================================== -->
+                <text
+                  x="215"
+                  y="35"
+                  text-anchor="middle"
+                  fill="#7a7a8e"
+                  font-size="13"
+                  font-weight="600"
+                  letter-spacing="1"
+                >
+                  CORTE TRANSVERSAL (LARGURA E PERFIL)
+                </text>
+
+                <!-- Perfil em corte do pneu (Banda de rodagem no topo, flancos descendo até o talão) -->
+                <g transform="translate(45, 20)">
+                  <!-- Estrutura do Pneu em U invertido -->
+                  <path
+                    d="M 70 310 
+                         C 50 310, 45 270, 45 220 
+                         C 45 150, 60 110, 95 85 
+                         C 125 65, 175 60, 245 60 
+                         C 315 60, 365 65, 395 85 
+                         C 430 110, 445 150, 445 220 
+                         C 445 270, 440 310, 420 310 
+                         L 395 310 
+                         C 410 270, 410 220, 400 160 
+                         C 385 110, 335 90, 245 90 
+                         C 155 90, 105 110, 90 160 
+                         C 80 220, 80 270, 95 310 Z"
+                    fill="url(#tireSideGrad)"
+                    stroke="#3e4158"
+                    stroke-width="2"
+                  />
+
+                  <!-- Lona Radial / Cintas de Aço (Notação R) -->
+                  <path
+                    d="M 105 125 C 135 78, 200 75, 245 75 C 290 75, 355 78, 385 125"
+                    fill="none"
+                    stroke="#ff00ff"
+                    stroke-width="2.5"
+                    stroke-dasharray="3,3"
+                  />
+                  <text
+                    x="245"
+                    y="112"
+                    text-anchor="middle"
+                    fill="#ff00ff"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    [R] Cintas de Aço Radiais a 90°
+                  </text>
+
+                  <!-- Roda / Leito do Aro (Apoio dos talões) -->
+                  <path
+                    d="M 60 310 L 430 310 L 415 345 L 75 345 Z"
+                    fill="#141520"
+                    stroke="#ffc107"
+                    stroke-width="1.5"
+                    stroke-dasharray="2,2"
+                  />
+                  <text
+                    x="245"
+                    y="332"
+                    text-anchor="middle"
+                    fill="#ffc107"
+                    font-size="12"
+                    font-weight="600"
+                  >
+                    Aro da Roda (15" / 381 mm)
+                  </text>
+
+                  <!-- Dimensão 1: LARGURA (185 mm) -->
+                  <!-- Linhas guia verticais pontilhadas -->
+                  <line
+                    x1="45"
+                    y1="200"
+                    x2="45"
+                    y2="40"
+                    stroke="#00e5ff"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <line
+                    x1="445"
+                    y1="200"
+                    x2="445"
+                    y2="40"
+                    stroke="#00e5ff"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <!-- Flecha de Largura -->
+                  <line
+                    x1="53"
+                    y1="45"
+                    x2="437"
+                    y2="45"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    marker-start="url(#arrow-cyan)"
+                    marker-end="url(#arrow-cyan)"
+                  />
+                  <!-- Caixa de Texto da Largura -->
+                  <rect
+                    x="155"
+                    y="32"
+                    width="180"
+                    height="26"
+                    rx="5"
+                    fill="#08080d"
+                    stroke="#00e5ff"
+                    stroke-width="1.5"
+                  />
+                  <text
+                    x="245"
+                    y="50"
+                    text-anchor="middle"
+                    fill="#00e5ff"
+                    font-size="13"
+                    font-weight="bold"
+                  >
+                    185: LARGURA (185 mm)
+                  </text>
+
+                  <!-- Dimensão 2: PAREDE LATERAL / PERFIL (111 mm) -->
+                  <!-- Linhas guia horizontais -->
+                  <line
+                    x1="420"
+                    y1="310"
+                    x2="480"
+                    y2="310"
+                    stroke="#00ff88"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <line
+                    x1="395"
+                    y1="85"
+                    x2="480"
+                    y2="85"
+                    stroke="#00ff88"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <!-- Flecha de Parede Lateral -->
+                  <line
+                    x1="470"
+                    y1="93"
+                    x2="470"
+                    y2="302"
+                    stroke="#00ff88"
+                    stroke-width="2"
+                    marker-start="url(#arrow-green)"
+                    marker-end="url(#arrow-green)"
+                  />
+                  <!-- Texto da Parede Lateral -->
+                  <rect
+                    x="420"
+                    y="185"
+                    width="100"
+                    height="42"
+                    rx="4"
+                    fill="#08080d"
+                    stroke="#00ff88"
+                    stroke-width="1"
+                  />
+                  <text
+                    x="470"
+                    y="202"
+                    text-anchor="middle"
+                    fill="#00ff88"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    60: PERFIL
+                  </text>
+                  <text
+                    x="470"
+                    y="218"
+                    text-anchor="middle"
+                    fill="#00ff88"
+                    font-size="11"
+                  >
+                    111,0 mm (60%)
+                  </text>
+                </g>
+
+                <!-- ==============================================================
+                   DIAGRAMA 2 (DIREITA): VISÃO LATERAL COMPLETA DO PNEU
+                   ============================================================== -->
+                <text
+                  x="665"
+                  y="35"
+                  text-anchor="middle"
+                  fill="#7a7a8e"
+                  font-size="13"
+                  font-weight="600"
+                  letter-spacing="1"
+                >
+                  VISÃO LATERAL (ARO E DIÂMETRO TOTAL)
+                </text>
+
+                <g transform="translate(665, 235)">
+                  <!-- Círculo externo (Banda de rodagem do pneu) - Raio 165px -->
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="165"
+                    fill="url(#tireSideGrad)"
+                    stroke="#3e4158"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="160"
+                    fill="none"
+                    stroke="#2a2b3d"
+                    stroke-width="8"
+                    stroke-dasharray="10,6"
+                  />
+
+                  <!-- Área da Parede Lateral -->
+                  <!-- Círculo interno (Borda do aro da roda) - Raio 104px -->
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="104"
+                    fill="url(#rimGrad)"
+                    stroke="#ffc107"
+                    stroke-width="2"
+                  />
+
+                  <!-- Detalhe da Roda / Raios -->
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="32"
+                    fill="#0c0d14"
+                    stroke="#ffc107"
+                    stroke-width="2"
+                  />
+                  <circle cx="0" cy="0" r="12" fill="#ffc107" />
+                  <!-- Raios estilizados da roda -->
+                  <line
+                    x1="0"
+                    y1="-104"
+                    x2="0"
+                    y2="-32"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="0"
+                    y1="32"
+                    x2="0"
+                    y2="104"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="-104"
+                    y1="0"
+                    x2="-32"
+                    y2="0"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="32"
+                    y1="0"
+                    x2="104"
+                    y2="0"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="-73"
+                    y1="-73"
+                    x2="-23"
+                    y2="-23"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="23"
+                    y1="23"
+                    x2="73"
+                    y2="73"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="73"
+                    y1="-73"
+                    x2="23"
+                    y2="-23"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+                  <line
+                    x1="-23"
+                    y1="23"
+                    x2="-73"
+                    y2="73"
+                    stroke="#37394e"
+                    stroke-width="6"
+                  />
+
+                  <!-- Texto gravado no flanco do pneu (efeito curvo simulado) -->
+                  <rect
+                    x="-85"
+                    y="-145"
+                    width="170"
+                    height="24"
+                    rx="4"
+                    fill="#08080d"
+                    stroke="#2a2a3a"
+                  />
+                  <text
+                    x="0"
+                    y="-129"
+                    text-anchor="middle"
+                    fill="#e8e8ee"
+                    font-size="12"
+                    font-weight="bold"
+                    letter-spacing="1"
+                  >
+                    <tspan fill="#00e5ff">185</tspan>
+                    /
+                    <tspan fill="#00ff88">60</tspan>
+                    <tspan fill="#ff00ff">R</tspan>
+                    <tspan fill="#ffc107">15</tspan>
+                    <tspan fill="#0dcaf0">88H</tspan>
+                  </text>
+
+                  <!-- Dimensão 3: DIÂMETRO DO ARO (15" / 381 mm) -->
+                  <line
+                    x1="-104"
+                    y1="0"
+                    x2="104"
+                    y2="0"
+                    stroke="#ffc107"
+                    stroke-width="1.8"
+                    marker-start="url(#arrow-yellow)"
+                    marker-end="url(#arrow-yellow)"
+                  />
+                  <rect
+                    x="-55"
+                    y="8"
+                    width="110"
+                    height="22"
+                    rx="3"
+                    fill="#08080d"
+                    stroke="#ffc107"
+                    stroke-width="1"
+                  />
+                  <text
+                    x="0"
+                    y="23"
+                    text-anchor="middle"
+                    fill="#ffc107"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    ARO: 15" (381 mm)
+                  </text>
+
+                  <!-- Dimensão 4: DIÂMETRO TOTAL (603 mm) -->
+                  <!-- Linhas guia horizontais de topo e base -->
+                  <line
+                    x1="0"
+                    y1="-165"
+                    x2="195"
+                    y2="-165"
+                    stroke="#ffffff"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <line
+                    x1="0"
+                    y1="165"
+                    x2="195"
+                    y2="165"
+                    stroke="#ffffff"
+                    stroke-width="1"
+                    stroke-dasharray="2,3"
+                  />
+                  <!-- Flecha vertical do diâmetro total -->
+                  <line
+                    x1="185"
+                    y1="-157"
+                    x2="185"
+                    y2="157"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    marker-start="url(#arrow-white)"
+                    marker-end="url(#arrow-white)"
+                  />
+                  <rect
+                    x="135"
+                    y="-12"
+                    width="100"
+                    height="38"
+                    rx="4"
+                    fill="#08080d"
+                    stroke="#ffffff"
+                    stroke-width="1"
+                  />
+                  <text
+                    x="185"
+                    y="4"
+                    text-anchor="middle"
+                    fill="#ffffff"
+                    font-size="10"
+                    font-weight="bold"
+                  >
+                    DIÂMETRO TOTAL
+                  </text>
+                  <text
+                    x="185"
+                    y="18"
+                    text-anchor="middle"
+                    fill="#00e5ff"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    603,0 mm
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards Explicativos com Badges Coloridas -->
+        <div class="row g-3 g-md-4 mb-4">
+          <!-- 185: Largura -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="glass-card h-100 p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge-part badge-width">185</span>
+                <span class="text-tertiary small">Milímetros (mm)</span>
+              </div>
+              <h5 class="text-white mb-2">Largura Nominal</h5>
+              <p class="text-secondary small mb-3">
+                Largura da banda de rodagem e dos flancos de ombro a ombro, em milímetros, com o pneu montado e calibrado.
+              </p>
+              <div class="mt-auto pt-3 border-top border-subtle">
+                <small class="text-accent d-block">
+                  <i class="bi bi-info-circle me-1"></i><strong>Impacto:</strong> Maior largura amplia contato e frenagem, com leve aumento de arrasto.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 60: Perfil -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="glass-card h-100 p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge-part badge-profile">60</span>
+                <span class="text-tertiary small">Percentual (%)</span>
+              </div>
+              <h5 class="text-white mb-2">Perfil / Série</h5>
+              <p class="text-secondary small mb-3">
+                Proporção entre altura da parede lateral e largura do pneu. <strong>60% de 185 mm</strong> = 111 mm.
+              </p>
+              <div class="mt-auto pt-3 border-top border-subtle">
+                <small class="text-success d-block">
+                  <i class="bi bi-check2-circle me-1"></i><strong>Impacto:</strong> Perfil alto absorve impactos; perfil baixo dá precisão em curvas.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- R: Radial -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="glass-card h-100 p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge-part badge-radial">R</span>
+                <span class="text-tertiary small">Construção</span>
+              </div>
+              <h5 class="text-white mb-2">Construção Radial</h5>
+              <p class="text-secondary small mb-3">
+                Lonas e cintas de aço internas dispostas no sentido <strong>radial</strong> (a 90° da linha de rodagem).
+              </p>
+              <div class="mt-auto pt-3 border-top border-subtle">
+                <small class="text-light d-block">
+                  <i class="bi bi-gear me-1"></i><strong>Impacto:</strong> Menor deformação em alta velocidade e maior durabilidade.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15: Diâmetro do Aro -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="glass-card h-100 p-3 p-md-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge-part badge-rim">15</span>
+                <span class="text-tertiary small">Polegadas (")</span>
+              </div>
+              <h5 class="text-white mb-2">Diâmetro do Aro</h5>
+              <p class="text-secondary small mb-3">
+                Medida interna do pneu, exata para o aro da roda onde o pneu assenta (15" = 381 mm).
+              </p>
+              <div class="mt-auto pt-3 border-top border-subtle">
+                <small class="text-warning d-block">
+                  <i class="bi bi-exclamation-triangle me-1"></i><strong>Impacto:</strong> Monte apenas em rodas com diâmetro idêntico.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informação Complementar: Carga e Velocidade -->
+        <div class="glass-card p-3 p-md-4">
+          <div class="row align-items-center g-3">
+            <div class="col-md-8">
+              <h6 class="text-white mb-1">
+                <i class="bi bi-speedometer2 text-accent me-2"></i>E o que significa "88H" no final da inscrição?
+              </h6>
+              <p class="text-secondary small mb-0">
+                <strong>88</strong> é o <em>Índice de Carga</em> (capacidade máxima de 560 kg por pneu). <strong>H</strong> é o <em>Símbolo de Velocidade</em> (até 210 km/h). Nunca instale pneus com índices inferiores aos homologados pela montadora.
+              </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <span class="badge bg-dark border border-subtle text-light me-1 p-2">88 = 560 kg</span>
+              <span class="badge bg-dark border border-subtle text-accent p-2">H = 210 km/h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!-- =================================================================
+           3. SEÇÃO: DIMENSÕES CALCULADAS
+           ================================================================= -->
+        <section id="dimensoes" class="mb-5" style="scroll-margin-top: 80px;">
+          <div class="glass-card mb-4">
+            <div class="glass-card-header d-flex align-items-center">
+              <i class="bi bi-calculator text-accent fs-4 me-3"></i>
+              <div>
+                <h5 class="mb-0">Dimensões Calculadas</h5>
+                <small class="text-tertiary">Fórmulas geométricas padronizadas para obter as medidas reais a partir dos dados nominais</small>
+              </div>
+            </div>
+            <div class="glass-card-body">
+              <p class="text-secondary mb-4">
+                A notação de um pneu combina milímetros, percentual e polegadas. Para comparar modelos e prever alterações na geometria da suspensão, convertemos tudo para o sistema métrico:
+              </p>
+
+              <!-- Grade com as 4 Fórmulas -->
+              <div class="row g-3 g-md-4 mb-4">
+                <!-- Fórmula 1: Parede Lateral -->
+                <div class="col-12 col-md-6">
+                  <div class="glass-card h-100 p-3 p-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="step-circle">1</span>
+                      <h6 class="text-white mb-0">Altura da Parede Lateral (Flanco)</h6>
+                    </div>
+                    <p class="text-secondary small mb-2">
+                      Camada de borracha entre o aro da roda e o piso. É calculada multiplicando a largura pelo percentual do perfil.
+                    </p>
+                    <div class="math-formula-box">
+                      <code>Parede Lateral = Largura × (Perfil ÷ 100)</code>
+                    </div>
+                    <small class="text-tertiary d-block">Resultado em milímetros (mm).</small>
+                  </div>
+                </div>
+
+                <!-- Fórmula 2: Diâmetro Total -->
+                <div class="col-12 col-md-6">
+                  <div class="glass-card h-100 p-3 p-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="step-circle">2</span>
+                      <h6 class="text-white mb-0">Diâmetro Total da Roda Montada</h6>
+                    </div>
+                    <p class="text-secondary small mb-2">
+                      Altura total do pneu montado. Soma o diâmetro da roda (aro em polegadas × 25,4 mm) mais duas paredes laterais.
+                    </p>
+                    <div class="math-formula-box">
+                      <code>Diâmetro = (2 × Parede Lateral) + (Aro × 25.4)</code>
+                    </div>
+                    <small class="text-tertiary d-block">O fator 2 considera a borracha superior e inferior.</small>
+                  </div>
+                </div>
+
+                <!-- Fórmula 3: Circunferência -->
+                <div class="col-12 col-md-6">
+                  <div class="glass-card h-100 p-3 p-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="step-circle">3</span>
+                      <h6 class="text-white mb-0">Circunferência de Rolamento</h6>
+                    </div>
+                    <p class="text-secondary small mb-2">
+                      Distância linear exata que o veículo percorre a cada rotação completa (360°) da roda.
+                    </p>
+                    <div class="math-formula-box">
+                      <code>Circunferência = π × Diâmetro Total</code>
+                    </div>
+                    <small class="text-tertiary d-block">Utiliza a constante Pi (π ≈ 3,14159265).</small>
+                  </div>
+                </div>
+
+                <!-- Fórmula 4: Revoluções por Km -->
+                <div class="col-12 col-md-6">
+                  <div class="glass-card h-100 p-3 p-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <span class="step-circle">4</span>
+                      <h6 class="text-white mb-0">Revoluções por Quilômetro</h6>
+                    </div>
+                    <p class="text-secondary small mb-2">
+                      Número de voltas completas necessárias para percorrer 1 km (1.000.000 mm).
+                    </p>
+                    <div class="math-formula-box">
+                      <code>Revoluções/km = 1.000.000 ÷ Circunferência</code>
+                    </div>
+                    <small class="text-tertiary d-block">Valores maiores indicam giros mais rápidos para a mesma velocidade.</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Exemplo Prático Passo a Passo -->
+              <div class="glass-card p-3 p-md-4">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                  <div>
+                    <h6 class="text-white mb-0">
+                      <i class="bi bi-file-earmark-check text-accent me-2"></i>Exemplo Prático: Pneu 185/60 R15
+                    </h6>
+                    <small class="text-tertiary">Resolução matemática passo a passo com valores reais</small>
+                  </div>
+                  <span class="badge bg-dark border border-subtle text-accent">Valores Reais</span>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="p-3 rounded bg-black bg-opacity-30 border border-subtle h-100">
+                      <span class="text-tertiary small fw-semibold d-block">PASSO 1 · Flanco</span>
+                      <div class="text-white small my-1">185 × (60 ÷ 100)</div>
+                      <div class="text-success h5 fw-bold mb-1">111,00 mm</div>
+                      <small class="text-secondary">11,1 cm de borracha no solo.</small>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="p-3 rounded bg-black bg-opacity-30 border border-subtle h-100">
+                      <span class="text-tertiary small fw-semibold d-block">PASSO 2 · Aro</span>
+                      <div class="text-white small my-1">15 pol × 25,4 mm</div>
+                      <div class="text-warning h5 fw-bold mb-1">381,00 mm</div>
+                      <small class="text-secondary">Diâmetro metálico do aro.</small>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="p-3 rounded bg-black bg-opacity-30 border border-subtle h-100">
+                      <span class="text-tertiary small fw-semibold d-block">PASSO 3 · Diâmetro</span>
+                      <div class="text-white small my-1">(2 × 111) + 381</div>
+                      <div class="text-accent h5 fw-bold mb-1">603,00 mm</div>
+                      <small class="text-secondary">60,3 cm de altura montada.</small>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="p-3 rounded bg-black bg-opacity-30 border border-subtle h-100">
+                      <span class="text-tertiary small fw-semibold d-block">PASSO 4 · Giros/km</span>
+                      <div class="text-white small my-1">π × 603 = 1.894,4 mm</div>
+                      <div class="text-light h5 fw-bold mb-1">527,9 voltas/km</div>
+                      <small class="text-secondary">1 km ÷ circunferência.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="border-secondary border-opacity-25 my-5" />
+
+        <!-- =================================================================
+           4. SEÇÃO: TABELA DE MEDIDAS COMUNS
+           ================================================================= -->
+        <section id="tabela-medidas" class="mb-5" style="scroll-margin-top: 80px;">
+          <div class="glass-card mb-4">
+            <div class="glass-card-header d-flex align-items-center justify-content-between flex-wrap gap-3">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-table text-accent fs-4 me-3"></i>
+                <div>
+                  <h5 class="mb-0">Tabela de Medidas Comuns</h5>
+                  <small class="text-tertiary">Principais medidas utilizadas pela frota de veículos leves e médios no Brasil</small>
+                </div>
+              </div>
+
+              <!-- Campo de Busca Interativo -->
+              <div class="position-relative" style="min-width: 260px; max-width: 100%;">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text bg-dark border-subtle text-muted">
+                    <i class="bi bi-search"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="tabelaSearch"
+                    class="form-control"
+                    placeholder="Filtrar medida ou veículo (ex: Polo, R16, 205)..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="glass-card-body p-0">
+              <div class="diagram-scroll-hint py-2 border-bottom border-subtle">
+                <i class="bi bi-arrows-expand me-1"></i>Role lateralmente para ver todas as colunas
+              </div>
+              <div class="guide-table-wrapper">
+                <div class="table-responsive">
+                  <table
+                    class="table table-striped table-hover mb-0"
+                    id="tabelaMedidas"
+                  >
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-3 px-3">
+                      <i class="bi bi-disc me-1 text-accent"></i>Medida
+                    </th>
+                    <th scope="col" class="py-3 px-2 text-center">Aro</th>
+                    <th scope="col" class="py-3 px-3">Largura</th>
+                    <th scope="col" class="py-3 px-3">Parede Lateral</th>
+                    <th scope="col" class="py-3 px-3">Diâmetro Total</th>
+                    <th scope="col" class="py-3 px-3">Circunferência</th>
+                    <th scope="col" class="py-3 px-3">
+                      Uso Comum e Aplicações
+                    </th>
+                    <th scope="col" class="py-3 px-3 text-end">Ação</th>
+                  </tr>
+                </thead>
+                <tbody class="align-middle">
+                  <!-- 165/70 R13 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >165/70 R13</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >13"</span
+                      >
+                    </td>
+                    <td class="px-3">165 mm</td>
+                    <td class="px-3">115,5 mm</td>
+                    <td class="px-3 text-accent fw-semibold">561,2 mm</td>
+                    <td class="px-3 text-muted">1.763,1 mm</td>
+                    <td class="px-3 text-muted small">
+                      Populares clássicos: Uno Mille, Gol G2/G3, Celta, Corsa
+                      Wind, Ka antigo, Palio 1.0
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 175/65 R14 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >175/65 R14</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >14"</span
+                      >
+                    </td>
+                    <td class="px-3">175 mm</td>
+                    <td class="px-3">113,8 mm</td>
+                    <td class="px-3 text-accent fw-semibold">583,1 mm</td>
+                    <td class="px-3 text-muted">1.831,9 mm</td>
+                    <td class="px-3 text-muted small">
+                      Compactos populares: Palio, Siena, Fiesta, Gol G4/G5,
+                      Voyage, Fox, Clio, Ka, Etios
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 185/65 R15 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >185/65 R15</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >15"</span
+                      >
+                    </td>
+                    <td class="px-3">185 mm</td>
+                    <td class="px-3">120,3 mm</td>
+                    <td class="px-3 text-accent fw-semibold">621,5 mm</td>
+                    <td class="px-3 text-muted">1.952,5 mm</td>
+                    <td class="px-3 text-muted small">
+                      Sedãs e hatches compactos: Onix, Prisma, Logan, Sandero,
+                      Grand Siena, Versa, HB20
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 185/60 R15 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >185/60 R15</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >15"</span
+                      >
+                    </td>
+                    <td class="px-3">185 mm</td>
+                    <td class="px-3">111,0 mm</td>
+                    <td class="px-3 text-accent fw-semibold">603,0 mm</td>
+                    <td class="px-3 text-muted">1.894,4 mm</td>
+                    <td class="px-3 text-muted small">
+                      Compactos modernos: Polo, Virtus, Etios XLS, Yaris, Honda
+                      Fit, City, March, Fiesta SE
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 195/55 R15 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >195/55 R15</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >15"</span
+                      >
+                    </td>
+                    <td class="px-3">195 mm</td>
+                    <td class="px-3">107,3 mm</td>
+                    <td class="px-3 text-accent fw-semibold">595,5 mm</td>
+                    <td class="px-3 text-muted">1.870,8 mm</td>
+                    <td class="px-3 text-muted small">
+                      Versões topo e esportivas: Gol Rallye, Fox Pepper/Prime,
+                      Saveiro Cross, Polo anterior, Fiesta Sport
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 195/65 R15 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >195/65 R15</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >15"</span
+                      >
+                    </td>
+                    <td class="px-3">195 mm</td>
+                    <td class="px-3">126,8 mm</td>
+                    <td class="px-3 text-accent fw-semibold">634,5 mm</td>
+                    <td class="px-3 text-muted">1.993,3 mm</td>
+                    <td class="px-3 text-muted small">
+                      Sedãs médios e minivans: Corolla (G9/G10), Civic G7,
+                      Astra, Focus MK1/MK2, Golf MK4, Spin, Cobalt
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 205/55 R16 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >205/55 R16</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >16"</span
+                      >
+                    </td>
+                    <td class="px-3">205 mm</td>
+                    <td class="px-3">112,8 mm</td>
+                    <td class="px-3 text-accent fw-semibold">631,9 mm</td>
+                    <td class="px-3 text-muted">1.985,2 mm</td>
+                    <td class="px-3 text-muted small">
+                      <strong class="text-white"
+                        >Mais vendido no Brasil:</strong
+                      >
+                      Corolla, Civic G8/G9/G10, Cruze, Golf MK7, Jetta, Focus
+                      MK3, Renegade Sport
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 215/50 R17 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >215/50 R17</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >17"</span
+                      >
+                    </td>
+                    <td class="px-3">215 mm</td>
+                    <td class="px-3">107,5 mm</td>
+                    <td class="px-3 text-accent fw-semibold">646,8 mm</td>
+                    <td class="px-3 text-muted">2.032,0 mm</td>
+                    <td class="px-3 text-muted small">
+                      Sedãs médios e crossovers: Cruze LTZ/Premier, Focus
+                      Titanium, Nissan Sentra, Tracker, Cerato
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 225/45 R17 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >225/45 R17</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >17"</span
+                      >
+                    </td>
+                    <td class="px-3">225 mm</td>
+                    <td class="px-3">101,3 mm</td>
+                    <td class="px-3 text-accent fw-semibold">634,3 mm</td>
+                    <td class="px-3 text-muted">1.992,7 mm</td>
+                    <td class="px-3 text-muted small">
+                      Sedãs esportivos e premium: Jetta TSI/Comfortline, Golf
+                      Highline, Audi A3, BMW Série 3 (F30), Mercedes Classe C
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- 225/40 R18 -->
+                  <tr>
+                    <td class="px-3 fw-bold text-white">
+                      <span class="badge bg-secondary-subtle text-light"
+                        >225/40 R18</span
+                      >
+                    </td>
+                    <td class="px-2 text-center">
+                      <span class="badge bg-dark border border-subtle"
+                        >18"</span
+                      >
+                    </td>
+                    <td class="px-3">225 mm</td>
+                    <td class="px-3">90,0 mm</td>
+                    <td class="px-3 text-accent fw-semibold">637,2 mm</td>
+                    <td class="px-3 text-muted">2.001,8 mm</td>
+                    <td class="px-3 text-muted small">
+                      Esportivos e topo de linha: Golf GTI, Civic Si, Jetta GLI,
+                      Corolla GR-S, BMW 320i M Sport, Mercedes A250
+                    </td>
+                    <td class="px-3 text-end">
+                      <a
+                        href="index.html"
+                        class="btn btn-sm btn-outline-info py-0 px-2"
+                        title="Comparar no comparador"
+                      >
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="p-3 border-top border-subtle d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <small class="text-tertiary">
+              <i class="bi bi-info-circle me-1"></i>Dimensões nominais de acordo com padrões ETRTO / ALAPA
+            </small>
+            <a href="index.html" class="btn btn-outline-info btn-sm">
+              <i class="bi bi-bar-chart-line me-1"></i>Abrir no Comparador
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+         5. SEÇÃO: DICAS DE SEGURANÇA
+         ================================================================= -->
+      <section id="dicas-seguranca" class="mb-5" style="scroll-margin-top: 80px;">
+        <div class="glass-card mb-4">
+          <div class="glass-card-header d-flex align-items-center">
+            <i class="bi bi-shield-check text-accent fs-4 me-3"></i>
+            <div>
+              <h5 class="mb-0">Dicas de Segurança e Troca de Medidas</h5>
+              <small class="text-tertiary">Recomendações técnicas vitais ao alterar a especificação original do veículo</small>
+            </div>
+          </div>
+          <div class="glass-card-body">
+            <!-- Alerta Crítico: Limite de 3% -->
+            <div class="alert alert-warning border-warning border-opacity-50 d-flex align-items-start gap-3 p-3 p-md-4 mb-4" role="alert">
+              <i class="bi bi-exclamation-triangle-fill fs-3 text-warning flex-shrink-0 mt-1"></i>
+              <div>
+                <h6 class="alert-heading fw-bold mb-1">A Regra dos 3%: Limite Máximo Recomendado</h6>
+                <p class="mb-0 small text-secondary">
+                  Ao substituir o conjunto de pneus ou rodas por medidas diferentes da original, <strong>a variação no diâmetro externo total nunca deve ultrapassar ±3%</strong>. Alterações superiores afetam a relação de marchas, geram erros no velocímetro e comprometem a calibração de freios <strong>ABS</strong>, Controle de Tração (<strong>TCS</strong>) e Estabilidade (<strong>ESP</strong>).
+                </p>
+              </div>
+            </div>
+
+            <!-- Alerta de Interferência Mecânica -->
+            <div class="alert alert-danger border-danger border-opacity-50 d-flex align-items-start gap-3 p-3 p-md-4 mb-4" role="alert">
+              <i class="bi bi-shield-slash-fill fs-3 text-danger flex-shrink-0 mt-1"></i>
+              <div>
+                <h6 class="alert-heading fw-bold mb-1">Atenção com a Largura e Offset (ET) da Roda</h6>
+                <p class="mb-0 small text-secondary">
+                  Pneus mais largos ou rodas com offset incompatível podem raspar nas bandejas, amortecedores ou na borda do para-lama durante o esterçamento total ou sob carga máxima de passageiros e bagagem.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cards com Pilares de Segurança -->
+            <div class="row g-3 g-md-4 mb-4">
+              <!-- Item 1: 3% Diâmetro -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-3 p-md-4 border-start border-3 border-warning">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-speedometer text-warning fs-4 me-2"></i>
+                    <h6 class="text-white mb-0">Tolerância de 3%</h6>
+                  </div>
+                  <p class="text-secondary small mb-0">
+                    Mantenha a variação de diâmetro entre -3% e +3%. Exemplo: se o original tem 600 mm, o substituto deve ficar entre 582 mm e 618 mm.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2: Suspensão e Raspagem -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-3 p-md-4 border-start border-3 border-danger">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-arrows-expand text-danger fs-4 me-2"></i>
+                    <h6 class="text-white mb-0">Caixa de Roda e Tala</h6>
+                  </div>
+                  <p class="text-secondary small mb-0">
+                    Pneus mais largos exigem tala compatível e espaço livre nas torres de suspensão e nas bordas internas dos para-lamas.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3: Conforto vs Estabilidade -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="glass-card h-100 p-3 p-md-4 border-start border-3 border-info">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-bezier2 text-info fs-4 me-2"></i>
+                    <h6 class="text-white mb-0">Perfil vs. Conforto</h6>
+                  </div>
+                  <p class="text-secondary small mb-0">
+                    Perfis baixos (≤ 45) entregam estabilidade em curvas, mas deixam o rodar mais rígido e aumentam o risco de danos em buracos.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 4: Manual do Fabricante -->
+              <div class="col-12 col-md-6">
+                <div class="glass-card h-100 p-3 p-md-4 border-start border-3 border-success">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-journal-bookmark text-success fs-4 me-2"></i>
+                    <h6 class="text-white mb-0">Manual do Proprietário</h6>
+                  </div>
+                  <p class="text-secondary small mb-0">
+                    Consulte as medidas e calibragens homologadas pelo fabricante na coluna da porta ou tampa de combustível antes de comprar novos pneus.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 5: Carga e Velocidade -->
+              <div class="col-12 col-md-6">
+                <div class="glass-card h-100 p-3 p-md-4 border-start border-3 border-accent">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-award text-accent fs-4 me-2"></i>
+                    <h6 class="text-white mb-0">Índice de Carga e Velocidade</h6>
+                  </div>
+                  <p class="text-secondary small mb-0">
+                    Nunca utilize índices de carga ou velocidade inferiores aos originais de fábrica para evitar superaquecimento e risco de estouro.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion com Perguntas Frequentes -->
+            <div class="glass-card p-3 p-md-4">
+              <h5 class="text-white mb-3">
+                <i class="bi bi-question-circle text-accent me-2"></i>Dúvidas Frequentes sobre Substituição de Pneus
+              </h5>
+              <div class="accordion" id="accordionSeguranca">
+                <!-- FAQ 1 -->
+                <div class="accordion-item bg-dark border-subtle">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button collapsed bg-transparent text-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      Como a mudança de diâmetro afeta a velocidade no velocímetro?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionSeguranca"
+                  >
+                    <div class="accordion-body text-secondary small">
+                      O velocímetro mede o giro do eixo. Se o pneu for <strong>maior</strong>, o carro percorre maior distância por volta, fazendo a velocidade real ser superior à indicada no painel. Se for menor, a velocidade real será inferior.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item bg-dark border-subtle">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed bg-transparent text-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      O que é o conceito de Plus Sizing (+1, +2)?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionSeguranca"
+                  >
+                    <div class="accordion-body text-secondary small">
+                      Plus Sizing é instalar rodas maiores (ex: de 15" para 16" ou 17") reduzindo proporcionalmente o perfil do pneu para manter o diâmetro total quase inalterado (variação inferior a 3%).
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item bg-dark border-subtle">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed bg-transparent text-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      A calibração de pressão muda com medidas diferentes?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionSeguranca"
+                  >
+                    <div class="accordion-body text-secondary small">
+                      Sim. Pneus com perfil mais baixo ou larguras diferentes podem necessitar de pressões de trabalho distintas. Consulte sempre a tabela técnica do fabricante do pneu.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+         6. CALL TO ACTION (CTA)
+         ================================================================= -->
+      <section class="text-center py-4 mb-4">
+        <div class="glass-card p-4 p-md-5">
+          <div class="d-inline-flex p-3 rounded-circle bg-dark border border-subtle mb-3 text-accent fs-2">
+            <i class="bi bi-bar-chart-line"></i>
+          </div>
+          <h2 class="display-6 fw-bold text-white mb-2">Pronto para Comparar na Prática?</h2>
+          <p class="lead text-secondary mx-auto mb-4" style="max-width: 620px">
+            Utilize nosso comparador visual para sobrepor perfis com cores distintas e visualizar as diferenças em tempo real.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="index.html" class="btn btn-primary px-4 py-2">
+              <i class="bi bi-arrows-fullscreen me-2"></i>Abrir Comparador Visual
+            </a>
+            <a href="sobre.html" class="btn btn-outline-secondary px-4 py-2">
+              <i class="bi bi-info-circle me-2"></i>Conhecer o Projeto
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <small>&copy; 2026 <strong>PneusMedidas</strong> | Comparador Visual de Pneus</small>
+      <div class="footer-links">
+        <a href="guia.html"><small>Guia</small></a>
+        <a href="sobre.html"><small>Sobre</small></a>
+        <a href="privacidade.html"><small>Privacidade</small></a>
+        <a href="termos.html"><small>Termos</small></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    var navToggle = document.getElementById("navToggle");
+    var navLinks = document.getElementById("navLinks");
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+      });
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("open");
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var searchInput = document.getElementById("tabelaSearch");
+      var table = document.getElementById("tabelaMedidas");
+      if (!searchInput || !table) return;
+
+      searchInput.addEventListener("input", function () {
+        var filter = searchInput.value.toLowerCase().trim();
+        var rows = table.querySelectorAll("tbody tr");
+
+        rows.forEach(function (row) {
+          var text = row.textContent.toLowerCase();
+          if (text.indexOf(filter) > -1) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

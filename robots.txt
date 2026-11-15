@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pneusmedidas.com.br/sitemap.xml

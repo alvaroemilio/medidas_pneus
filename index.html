@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PneusMedidas: compare visualmente tamanhos de pneus. Sobreponha perfis com cores distintas para identificar diferenças de largura, diâmetro e parede lateral."
+    />
+    <meta name="keywords" content="comparador de pneus, medidas de pneus, comparar pneus, tamanho de pneu, 185/60 R15, 195/55 R15, diâmetro pneu, largura pneu" />
+    <meta name="theme-color" content="#08080f" />
+
+    <title>PneusMedidas | Comparador Visual de Pneus</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="PneusMedidas | Comparador Visual de Pneus"
+    />
+    <meta
+      property="og:description"
+      content="Compare visualmente tamanhos de pneus com sobreposição de perfis coloridos."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3 (grid + utilities only in practice) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/1lP6tFb0d2nlHQDEwfi5vhvbN4CSPKZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- =====================================================================
+       NAVBAR
+       ===================================================================== -->
+    <nav class="site-nav">
+      <div class="site-container">
+        <a class="nav-brand" href="index.html">
+          <img
+            src="img/favicon.svg"
+            alt="PneusMedidas"
+            width="30"
+            height="30"
+          />
+          <span>PneusMedidas</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html" class="active" aria-current="page">
+              <i class="bi bi-bar-chart-line"></i> Comparador
+            </a>
+          </li>
+          <li>
+            <a href="guia.html"> <i class="bi bi-book"></i> Guia </a>
+          </li>
+          <li>
+            <a href="sobre.html"> <i class="bi bi-info-circle"></i> Sobre </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =====================================================================
+       MAIN CONTENT
+       ===================================================================== -->
+    <main class="main-content">
+      <div class="site-container">
+        <!-- Page Hero -->
+        <div class="page-hero">
+          <h1>Compare <span class="text-gradient">Pneus</span> Visualmente</h1>
+          <p>
+            Sobreponha perfis de até 6 pneus com cores distintas e veja as
+            diferenças instantaneamente.
+          </p>
+        </div>
+
+        <!-- App Grid: Sidebar + Main -->
+        <div class="app-grid">
+          <!-- =================================================================
+             SIDEBAR
+             ================================================================= -->
+          <aside class="sidebar">
+            <!-- Add Tire Form -->
+            <div class="glass-card">
+              <div class="glass-card-header">
+                <h5><i class="bi bi-plus-circle me-2"></i>Adicionar Pneu</h5>
+                <span class="count-badge" id="tireCount">0 / 6</span>
+              </div>
+              <div class="glass-card-body">
+                <form id="tireForm" novalidate>
+                  <div class="form-group">
+                    <label for="inputWidth" class="form-label"
+                      >Largura (mm)</label
+                    >
+                    <select
+                      class="form-select"
+                      id="inputWidth"
+                      required
+                    ></select>
+                    <div class="invalid-feedback" id="errorWidth"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputProfile" class="form-label"
+                      >Perfil (%)</label
+                    >
+                    <select
+                      class="form-select"
+                      id="inputProfile"
+                      required
+                    ></select>
+                    <div class="invalid-feedback" id="errorProfile"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputRim" class="form-label"
+                      >Aro (polegadas)</label
+                    >
+                    <select class="form-select" id="inputRim" required></select>
+                    <div class="invalid-feedback" id="errorRim"></div>
+                  </div>
+
+                  <div class="actions-row">
+                    <button type="submit" class="btn btn-primary" id="addBtn">
+                      <i class="bi bi-plus-lg"></i> Adicionar
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-ghost btn-icon"
+                      id="clearBtn"
+                      title="Remover todos"
+                      aria-label="Remover todos os pneus"
+                    >
+                      <i class="bi bi-trash3"></i>
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Presets -->
+                <div class="presets-section">
+                  <div class="presets-label">Medidas populares</div>
+                  <div class="presets-grid" id="presetContainer"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tire List -->
+            <div
+              id="tireList"
+              class="tire-list"
+              style="margin-top: var(--space-md)"
+            >
+              <!-- Generated by JS -->
+            </div>
+          </aside>
+
+          <!-- =================================================================
+             MAIN: Visualization + Table
+             ================================================================= -->
+          <section class="viz-section">
+            <!-- Visualization Controls Bar -->
+            <div class="viz-controls-bar">
+              <div class="viz-control-group">
+                <span class="viz-control-label"
+                  ><i class="bi bi-sliders me-1"></i> Alinhamento:</span
+                >
+                <div
+                  class="btn-group-toggle"
+                  role="group"
+                  aria-label="Modo de alinhamento"
+                >
+                  <button
+                    type="button"
+                    class="btn-mode active"
+                    id="alignCenterBtn"
+                    title="Alinhar pneus pelos eixos centrais"
+                  >
+                    <i class="bi bi-crosshair"></i> Pelo Centro
+                  </button>
+                  <button
+                    type="button"
+                    class="btn-mode"
+                    id="alignGroundBtn"
+                    title="Alinhar pneus pela base de apoio no solo"
+                  >
+                    <i class="bi bi-border-bottom"></i> Pelo Solo (Asfalto)
+                  </button>
+                </div>
+              </div>
+              <div class="viz-control-group">
+                <span class="badge-hud"
+                  ><i class="bi bi-layers-fill text-accent me-1"></i>
+                  <span id="activeTiresCount">0 pneus ativos</span></span
+                >
+              </div>
+            </div>
+
+            <!-- Canvas Comparison -->
+            <div class="canvas-grid">
+              <div class="canvas-wrapper">
+                <span class="canvas-label">Seção Transversal</span>
+                <canvas id="frontCanvas" class="comparison-canvas"></canvas>
+              </div>
+              <div class="canvas-wrapper">
+                <span class="canvas-label">Vista Lateral</span>
+                <canvas id="sideCanvas" class="comparison-canvas"></canvas>
+              </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="glass-card">
+              <div class="glass-card-header">
+                <h5><i class="bi bi-table me-2"></i>Comparação Detalhada</h5>
+              </div>
+              <div class="table-wrapper">
+                <table class="comparison-table" id="comparisonTable">
+                  <thead>
+                    <tr>
+                      <th
+                        colspan="2"
+                        style="
+                          text-align: center;
+                          color: var(--text-tertiary);
+                          font-weight: 500;
+                          text-transform: none;
+                          letter-spacing: 0;
+                        "
+                      >
+                        Adicione pneus para ver a comparação
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+    <footer class="site-footer">
+      <div class="site-container">
+        <small>&copy; 2026 <strong>PneusMedidas</strong> | Comparador Visual de Pneus</small>
+        <div class="footer-links">
+          <a href="guia.html"><small>Guia</small></a>
+          <a href="sobre.html"><small>Sobre</small></a>
+          <a href="privacidade.html"><small>Privacidade</small></a>
+          <a href="termos.html"><small>Termos</small></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================================
+       TOAST CONTAINER
+       ===================================================================== -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- =====================================================================
+       SCRIPTS
+       ===================================================================== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/tire-math.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/tire-renderer.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Mobile nav toggle -->
+    <script>
+      var navToggle = document.getElementById("navToggle");
+      var navLinks = document.getElementById("navLinks");
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("open");
+        });
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
